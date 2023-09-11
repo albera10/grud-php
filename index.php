@@ -27,11 +27,19 @@
 	<div class="container">
 		<div class="row">
 			<h2 class="text-align:center mt-4">Relación de personal</h2>
-		</div> <!-- Row -->
+			
+			<div class="col-md-8">
+				<a href="nuevo.php" class="btn btn-primary mt-4 col-sm-2.5">+ Nuevo usuarios</a>
+			</div>
 
-		<div>
-			<a href="nuevo.php" class="btn btn-primary mt-4">+ Nuevo usuarios</a>
-		</div>
+			<form action="" method="POST" class="col-sm-4 offset-sm-2 col-md-4 offset-md-0 mt-4">
+				<b>Nombre: </b><input type="text" id="campo" name="campo">
+				<input class="btn btn-primary" type="submit" id="enviar" name="enviar" value="Buscar">
+			</form>
+		</div> <!-- Row -->
+			
+
+
 
 		<!-- Se crea una tabla responsiva -->
 		<div class="mt-3">
