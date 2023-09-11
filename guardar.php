@@ -11,7 +11,11 @@
 
 	$sql = "INSERT INTO personas(nombre, correo, telefono, estado_civil) VALUES('$nombre', '$correo', '$telefono', '$estado_civil')";
 	$resultado = $mysqli->query($sql);
+
+	header("location:index.php");
 ?>
+
+<!-- 
 
 	<html lang="es">
 	<head>		
@@ -26,14 +30,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="row" style="text-align:center">
-					<?php if($resultado) { ?>
+					<?php //if($resultado) { ?>
 						<h3>REGISTRO GUARDADO</h3>
-						<?php } else { ?>
+						<?php //} else { ?>
 						<h3>ERROR AL GUARDAR</h3>
-					<?php } ?>					
+					<?php //} ?>					
 					<a href="index.php" class="btn btn-primary">Regresar</a>					
 				</div>
 			</div>
 		</div>
 	</body>
-</html>
+</html> -->

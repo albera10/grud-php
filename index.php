@@ -8,8 +8,6 @@
 	$sql = "SELECT * FROM personas";
 	$resultado = $mysqli->query($sql);
 	
-	/* Borrar los registros */
-	
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +76,7 @@
 
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 	<div class="modal-dialog">
 	  <div class="modal-content">
 		<div class="modal-header">
@@ -90,7 +88,8 @@
 		</div>
 		<div class="modal-footer">
 		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-		  <button type="button" class="btn btn-primary">Borrar</button>
+		  <a href="eliminar.php" class="btn btn-primary btn-ok">Borrar</a>
+		  <!-- <button type="button" class="btn btn-primary btn-ok">Borrar</button> -->
 		</div>
 	  </div>
 	</div>
