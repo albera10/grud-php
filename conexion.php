@@ -11,8 +11,9 @@
 	if($mysqli->connect_error) {
 		die('Error en la conexión: '. $conn->connect_error);
 	}
+	
+	//echo('Conectado exitosamente');
 	/*
-	echo('Conectado exitosamente');
 	printf('Servidor información'. $conn->server_info);
 	*/	
 ?>

@@ -33,7 +33,7 @@
 
 					<div class="col-md-6">
 						<label for="inputState" class="form-label">Estado civil</label>
-						<select id="inputState" class="form-select"  id="estado_civil" name="estado_civil">
+						<select class="form-select" id="estado_civil" name="estado_civil"> <!-- id="inputState" -->
 							<option selected>Abrir este menú de selección</option>
 							<option value="Soltero">Soltero</option>
 							<option value="Casado">Casado</option>

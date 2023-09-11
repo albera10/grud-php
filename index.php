@@ -4,8 +4,12 @@
 	/* Se declara una variable */
 	$where = "";
 
+	/* Query para visualizar los registros */
 	$sql = "SELECT * FROM personas";
-	$resultado = $mysqli->query($sql);	
+	$resultado = $mysqli->query($sql);
+	
+	/* Borrar los registros */
+	
 ?>
 
 <!DOCTYPE html>
@@ -55,12 +59,12 @@
 								<td><?php echo($row['correo']); ?></td>
 								<td><?php echo($row['telefono']); ?></td>
 								<td><?php echo($row['estado_civil']); ?></td>
-								<td>
-									<a class="btn btn-primary" href="editar.php?id=<?php echo($row['id']); ?>">
+								<td>									
+									<a class="btn btn-warning" href="editar.php?id=<?php echo($row['id']); ?>">
 										<i class="bi bi-pencil"></i>
 									</a>
-									<a class="btn btn-warning" href="#" data-href="eliminar.php?id=<?php echo($row['id']); ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="bi bi-trash3"></i>
+									<a class="btn btn-primary" href="#" data-href="eliminar.php?id=<?php echo($row['id']); ?>" data-bs-toggle="modal" data-bs-target="#confirm-delete">
+									<i class="bi bi-trash3"></i>
 									</a>
 								</td>								
 							</tr>
@@ -78,11 +82,11 @@
 	<div class="modal-dialog">
 	  <div class="modal-content">
 		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
+		  <h5 class="modal-title" id="exampleModalLabel">Borrar Registro</h5>
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			¿Deseas eliminar este registro?
+			¿Deseas boorar este registro?
 		</div>
 		<div class="modal-footer">
 		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -92,45 +96,6 @@
 	</div>
   </div>
 
-
-
-<!-- <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" &times;></button>
-					<h4 class="modal-title" id="myModalLabel">Eliminar Registro</h4>
-				</div>
-
-				<div class="modal-body">
-					¿Deseas eliminar este registro?
-				</div>
-
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-danger btn-ok">Borrar</a>
-				</div>
-
-			</div>
-		</div>
-	</div>
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<script src="jquery/jquery-3.7.1.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
@@ -138,3 +103,4 @@
 </body>
 
 </html>
+
